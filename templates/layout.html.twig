@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+{% block title %}WF3-HOTEL{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ asset('style/style.css') }}">
+{% endblock %}
+{% block javascripts %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{% endblock %}
+{% block body %}
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<a href="" class="navbar-brand">WF3-Hotel</a>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="">Inscription</a>
+				</li>
+				<li>
+					<a href="">Connexion</a>
+				</li>
+				<li>
+					<a href="">Déconnexion</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                    <div class="thumbnail">
+                        <img src="{{ asset('public/img/') }}chambre_1.jpg">
+                      <div class="caption">
+
+                      </div>
+                    </div>
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="../public/img/chambre_1.jpg" alt="">
+                      <div class="caption">
+
+                      </div>
+                    </div>
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide1">
+                      <div class="caption">
+
+                      </div>
+                    </div>
+                </div><!-- End Item -->
+              </div><!-- End Carousel Inner -->
+              <div class="carousel-controls">
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+            </div>
+            <div id="openweathermap-widget-15" style="width= 200px ,length = 150 px"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '2988507',appid: 'f15bb314f82439dffcdd9493695cbd50',units: 'metric',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+
+{% endblock %}
