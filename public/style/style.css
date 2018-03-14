@@ -1,0 +1,13 @@
+body{
+    background-image: url("../img/back-image.jpg");
+}
+
+#openweathermap-widget-15 {
+    width: 100px;
+    position: absolute;
+    z-index: 5;
+    left:0px;
+    bottom: 0px;
+    display : inline;
+}
+
