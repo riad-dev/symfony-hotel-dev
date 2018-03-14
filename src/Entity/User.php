@@ -23,9 +23,9 @@ class User implements UserInterface
     *@Assert\NotBlank()
     *@var string
     */
-    
+
     private $nom;
-    
+
     /**
     *@ORM\Column(unique=true)
     *@Assert\NotBlank()
@@ -44,6 +44,7 @@ class User implements UserInterface
     *@var string
     */
     private $role = 'ROLE_USER';
+
     function getNom() {
         return $this->nom;
     }
