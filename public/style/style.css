@@ -5,3 +5,10 @@ body{
 	width: 15px;
 	height: 15px;
 }
+.navbar-inverse, .navbar {
+	margin-bottom: 0;
+	text-align: center;
+}
+#openweathermap-widget-15{
+
+}
