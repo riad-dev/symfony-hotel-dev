@@ -16,4 +16,7 @@ class CommentsController extends Controller
             'controller_name' => 'CommentsController',
         ]);
     }
+    public function addComment(){
+        return $this->render();
+    }
 }

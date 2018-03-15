@@ -14,6 +14,7 @@
 	<nav class="navbar navbar-default" style="background:lightblue">
 		<div class="container">
 			<a href="" class="navbar-brand">WF3-Hotel</a>
+      {% if app.user is null %}
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a href="{{ path('app_user_register') }}">Inscription</a>
@@ -21,6 +22,7 @@
 				<li>
 					<a href="{{ path('app_user_login') }}">Connexion</a>
 				</li>
+      {% endif %}
 				<li>
 					<a href="{{ path('app_user_logout') }}">Déconnexion</a>
 				</li>
