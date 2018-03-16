@@ -1,8 +1,18 @@
-body{
-    background-image: url("../img/back-image.jpg");
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 mars 2018, 11:52:17
+    Author     : Etudiant
+*/
+
+body {
+        background-color: blue;
 }
 
-#openweathermap-widget-15 {
+/*#openweathermap-widget-15 {
     width: 100px;
     position: absolute;
     z-index: 5;
@@ -11,3 +21,13 @@ body{
     display : inline;
 }
 
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}*/

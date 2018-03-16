@@ -26,13 +26,13 @@
 			</ul>
                 <div>
 	</nav>
-        <div class ="container">     
+        <!--<div class ="container">-->     
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="thumbnail">
                             <img src="{{ asset('img/chambre_1.jpg') }}">
-                          <div class="caption">
+                          <div class="carousel-caption">
                              <h2> Chambre Symfony </h2>
                           </div>
                         </div>
@@ -40,7 +40,7 @@
                     <div class="item">
                         <div class="thumbnail">
                           <img src="{{ asset('img/chambre_7.jpg') }}">
-                          <div class="caption">
+                          <div class="carousel-caption">
                               <h2> Chambre Bootstrap </h2>
                           </div>
                         </div>
@@ -48,14 +48,14 @@
                     <div class="item">
                         <div class="thumbnail">
                           <img src="{{ asset('img/chambre_5.jpg') }}">
-                          <div class="caption">
+                          <div class="carousel-caption">
                               <h2> Chambre JavaScript </h2>
                           </div>
                         </div>
                     </div><!-- End Item -->
-                     <div id="openweathermap-widget-15"></div>
+                    <div id="openweathermap-widget-15"></div>
                 </div><!-- End Carousel Inner -->
-                <div class="carousel-controls">
+               <div class="carousel-controls">
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                     <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     
@@ -63,7 +63,70 @@
                 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '2988507',appid: 'f15bb314f82439dffcdd9493695cbd50',units: 'metric',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
                 </div>
             </div>
-        </div><!--End Container-->
+       <!-- </div><!--End Container-->-->
     
+
+{#{% endblock %}#}
+{#{% block content%}#}
+    <div class ="container">
+        <div class="row text-center" id="chambres">
+            <h2>{ Les Chambres } - WF3 Hotel</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_1.jpg') }}" alt="chambre angular" class="img-responsive">
+                <div class="caption">
+                    <p>chambre angular</p>
+            </div>
+            </div>
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_2.jpg') }}" alt="chambre bootstrap" class="img-responsive">
+                <div class="caption">
+                    <p>chambre bootstrap</p>
+                </div>
+            </div>
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_3.jpg') }}" alt="chambre javascript" class="img-responsive">
+                <div class="caption">
+                    <p>chambre javascript</p>
+                </div>
+            </div>
+            <div class="col-sm-3 thumbnail col-sm-3 text-center">
+                <img src="{{ asset('img/chambre_4.jpg') }}" alt="chambre python" class="img-responsive">
+                <div class="caption">
+                    <p>chambre python</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_5.jpg') }}" alt="chambre ruby" class="img-responsive">
+                <div class="caption">
+                    <p>chambre ruby</p>
+                </div>
+            </div>
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_6.jpg') }}" alt="chambre symfony" class="img-responsive">
+                <div class="caption">
+                    <p>chambre symfony</p>
+                </div>
+            </div>
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_7.jpg') }}" alt="chambre jquery" class="img-responsive">
+                <div class="caption">
+                    <p>chambre jquery</p>
+                </div>
+            </div>
+            <div class="col-sm-3 thumbnail text-center">
+                <img src="{{ asset('img/chambre_8.jpg') }}" alt="chambre php" class="img-responsive">
+                <div class="caption">
+                    <p>chambre php</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 {% endblock %}
