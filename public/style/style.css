@@ -1,5 +1,6 @@
 body{
-	background: url("../img/back_image.jpg");
+	background: url("../img/back_image.jpg"), no-repeat;
+
 }
 #openweathermap-widget-15 {
 	width: 15px;

@@ -12,15 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class UserController extends Controller
 {
-    /**
-     * @Route("/user", name="user")
-     */
-    public function index()
-    {
-        return $this->render('layout.html.twig', [
-            'controller_name' => 'UserController',
-        ]);
-    }
+
 
     /**
      *
@@ -59,7 +51,7 @@ class UserController extends Controller
 
     }
     /**
-     * @Route("/")
+     * @Route("/login")
      */
     public function login(AuthenticationUtils $authenticationUtils){
         $error = $authenticationUtils->getLastAuthenticationError();
