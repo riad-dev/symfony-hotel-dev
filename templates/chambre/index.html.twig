@@ -1,1 +1,22 @@
-{# empty Twig template #}
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+    <h1>{{ chambre.title }}</h1>
+    <div class="container">
+        <div class ="row">
+            <div class="thumbnail col-6-md col-12-xs">
+               <img src="{{ asset('upload/'~chambre.image}}">
+            </div>
+            <div class=" row col-6-md col-12-xs"
+                 <h2>chambre.title</h2>
+            </div>
+            <div class=" row col-6-md col-12-xs"
+                 <h2>chambre.description</h2>
+            </div>
+        </div>
+    </div>
+                
+ 
+{% endblock %}{# empty Twig template #}
