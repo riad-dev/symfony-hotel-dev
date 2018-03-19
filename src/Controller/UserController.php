@@ -12,13 +12,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class UserController extends Controller
 {
-
-
     /**
      *
      * @param Request $request
      * @return type
-     * @Route("/")
+     * @Route("/register")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder){
         $user= new User();
@@ -55,7 +53,7 @@ class UserController extends Controller
      */
     public function login(AuthenticationUtils $authenticationUtils){
         $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getUsername();
+        $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('user/login.html.twig',
                 [

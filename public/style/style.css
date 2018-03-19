@@ -1,5 +1,6 @@
 body{
-	background: url("../img/back_image.jpg"), no-repeat;
+	background: url("../img/back_image.jpg") center fixed no-repeat;
+	background-size: cover;
 
 }
 #openweathermap-widget-15 {
@@ -12,4 +13,8 @@ body{
 }
 #openweathermap-widget-15{
 
+}
+table{
+	border:2px;
+	border-color: black;
 }

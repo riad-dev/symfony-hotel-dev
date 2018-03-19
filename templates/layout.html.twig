@@ -22,6 +22,9 @@
 				<li>
 					<a href="{{ path('app_user_login') }}">Connexion</a>
 				</li>
+        <li>
+          <a href="{#{ path('app_contact_index') }#}">Contact</a>
+        </li>
       {% endif %}
 				<li>
 					<a href="{{ path('app_user_logout') }}">Déconnexion</a>
@@ -31,7 +34,7 @@
 	</nav>
   <nav class="navbar-inverse">
     <ul>
-      <a href="">Nos Chambres</a>
+      <a href="{#{ path('app_chambre_index') }#}">Nos Chambres</a>
       <a href="">Activités</a>
       <a href="">Restaurant</a>
     </ul>
