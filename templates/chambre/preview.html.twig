@@ -2,25 +2,24 @@
 
 {% block content %}
 
-    {% for chambre in chambres if chambre.id_chambre== 1 %}
 
     <h3>{{ chambre.nom }}</h3>
     <div class="container">
         <div class="row" style="display:inline-block">
-        <div class ="row" style="width:40% ">
-                <div class="thumbnail col-6-md col-12-xs">
-                    <caption>{{ chambre.nom }}</caption>
-                   <img src="{{ asset('img/'~chambre.image) }}">
-               </div>
-        </div>
+            <div class ="row" style="width:40% ">
+                    <div class="thumbnail col-6-md col-12-xs">
+                        <caption>{{ chambre.nom }}</caption>
+                       <img src="{{ asset('img/'~chambre.image) }}">
+                   </div>
+            </div>
 
-        <div class="row" style="width:40% ">
-            <div class=" row col-6-md col-12-xs">
-                 <h2>{{ chambre.description }}</h2>
+            <div class="row" style="width:40% ">
+                <div class=" row col-6-md col-12-xs">
+                     <h2>{{ chambre.description }}</h2>
+                </div>
             </div>
         </div>
-</div>
     </div>
 
-{% endfor %}
+
 {% endblock %}
