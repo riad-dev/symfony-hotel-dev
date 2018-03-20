@@ -2,18 +2,45 @@
 
 namespace App\Controller;
 
-use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Chambre;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ChambreController extends Controller
 {
     /**
-     * @Route("/chambre", name="chambre")
+     * @Route("/chambre")
      */
-    public function index()
+    public function preview()
     {
-        return $this->render('chambre/index.html.twig', [
-            'controller_name' => 'ChambreController',
-        ]);
+        $repository = $this->getDoctrine()->getRepository(Chambre::class);
+        $chambres = $repository->findAll();
+        
+        return $this->render(
+                'chambre/preview.html.twig',
+                [
+                    'chambres' => $chambres
+                ]
+        );
+    }
+ 
+     /**
+     * @Route("/")
+     */
+    public function index(Chambre $chambre)
+    {
+        
+        $repository = $this->getDoctrine()->getRepository(Chambre::class);
+        $chambres = $repository->findAll();
+         
+       
+        
+        
+        return $this->render('chambre/index.html.twig', 
+                [
+                    'chambres' => $chambres
+                ]
+        );
     }
 }
+
