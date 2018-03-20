@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ContactRepository;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints as Assert;
+
 
 
 /**
@@ -27,7 +29,7 @@ class Contact
     private $nom;
 
     /**
-    *@ORM\Column(unique=true)
+    *@ORM\Column()
     *@Assert\NotBlank()
     *@Assert\Email(message="Cet email n'est pas valide")
     *@var string

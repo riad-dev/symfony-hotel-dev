@@ -2,6 +2,8 @@
 {% block title %}WF3-HOTEL{% endblock %}
 {% block stylesheets %}
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One|Pacifico" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('style/style.css') }}">
 {% endblock %}
 {% block javascripts %}
@@ -14,7 +16,7 @@
 	<nav class="navbar navbar-default" style="background:lightblue">
 		<div class="container">
 
-			<a href="" class="navbar-brand"><img src="{{ asset('img/logo.png') }}" alt=""></a>
+			<a href="{{ path('app_user_index') }}" class="navbar-brand" style="font-family: 'Pacifico', cursive">WF3-HOTEL</a>
       {% if app.user is null %}
 			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -23,21 +25,22 @@
 				<li>
 					<a href="{{ path('app_user_login') }}">Connexion</a>
 				</li>
-        <li>
-          <a href="{#{ path('app_contact_index') }#}">Contact</a>
-        </li>
+
       {% endif %}
 				<li>
 					<a href="{{ path('app_user_logout') }}">Déconnexion</a>
 				</li>
+        <li>
+          <a href="{#{ path('app_contact_index') }#}">Contact</a>
+        </li>
 			</ul>
 		</div>
 	</nav>
-  <nav class="navbar-inverse">
+  <nav class="navbar-default">
     <ul>
-      <a href="{#{ path('app_chambre_index') }#}">Nos Chambres</a>
-      <a href="">Activités</a>
-      <a href="">Restaurant</a>
+      <a href="{{ path('app_chambre_index') }}">Nos Chambres</a>
+      <a href="{{ path('app_activites_index') }}">Activités</a>
+      <a href="{#{ path('app_comments_index') }#}">Commentaires</a>
     </ul>
 
   </nav>

@@ -12,8 +12,8 @@ class ContactController extends Controller
 {
     /**
      *
-     * @param Request $request
-     * @return type
+     *
+     *
      * @Route("/contact")
      */
 
@@ -27,9 +27,9 @@ class ContactController extends Controller
             $em->persist ($contact);
             $em->flush();
 
-             $this->addFlash('success', 'Votre compte a été envoyé ');
+             $this->addFlash('success', 'Votre message a été envoyé ');
 
-             return $this->redirectToRoute('layout.html.twig');
+             return $this->redirectToRoute('app/layout.html.twig');
 
             }else{
                 $this->addFlash('error', 'Le formulaire contient des erreurs');

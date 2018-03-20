@@ -18,4 +18,15 @@ class ChambreController extends Controller
             'chambres' => $chambres
         ]);
     }
+    /**
+    *@Route("/chambre/preview")
+    */
+    public function preview(){
+        $repository = $this->getDoctrine()->getRepository(Chambre::class);
+        $chambres = $repository->findAll();
+
+        return $this->render('chambre/preview.html.twig', [
+            'chambres' => $chambres]);}
+
 }
+

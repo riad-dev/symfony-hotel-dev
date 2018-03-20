@@ -9,12 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class CommentsController extends Controller
 {
     /**
-     * @Route("/comments", name="comments")
+     * @Route("/comments")
      */
-    public function menu()
+    public function menu($comments)
     {
         $repository = $this->getDoctrine()->getRepository(Comments::class);
-        $comments = $repository->findAll();
+        $comments = $repository->findLatest(3, $comments);
 
         return $this->render(
                 'comments/menu.html.twig',

@@ -13,6 +13,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class UserController extends Controller
 {
     /**
+     * @Route("/")
+     */
+    public function index()
+    {
+
+        return $this->render('layout.html.twig', [
+
+        ]);
+    }
+    /**
      *
      * @param Request $request
      * @return type

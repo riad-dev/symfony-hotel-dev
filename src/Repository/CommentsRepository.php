@@ -19,6 +19,27 @@ class CommentsRepository extends ServiceEntityRepository
         parent::__construct($registry, Comments::class);
     }
 
+    public function findLatest($limit, Comments $comments = null)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb
+            ->orderBy('a.id', 'DESC')
+            ->setMaxResults($limit)
+        ;
+
+        if (!is_null($comments)){
+            //$qb->andWhere('Identity(a.comments) = ' . $comments->getId());
+            $qb
+                    ->andWhere('IDENTITY(a.comments) =:comments')
+                    ->setParameter('comments', $comments->getId())
+                ;
+        }
+
+
+        return $qb->getQuery()->getResult();
+    }
+
     /*
     public function findBySomething($value)
     {
