@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merienda+One|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="{{ asset('style/style.css') }}">
 {% endblock %}
 {% block javascripts %}
@@ -13,7 +14,7 @@
 
 {% block body %}
 
-	<nav class="navbar navbar-default" style="background:lightblue">
+	<nav class="w3-bar w3-blue" style="background:lightblue">
 		<div class="container">
 
 			<a href="{{ path('app_user_index') }}" class="navbar-brand" style="font-family: 'Pacifico', cursive">WF3-HOTEL</a>
@@ -40,7 +41,7 @@
     <ul>
       <a href="{{ path('app_chambre_index') }}">Nos Chambres</a>
       <a href="{{ path('app_activites_index') }}">Activités</a>
-      <a href="{#{ path('app_comments_index') }#}">Commentaires</a>
+      <a href="{{ path('app_comments_menu') }}">Derniers Avis</a>
     </ul>
 
   </nav>
