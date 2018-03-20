@@ -76,6 +76,6 @@ class UserController extends Controller
      */
     public function logout()
     {
-        return $this->render('layout.html.twig');
+
     }
 }

@@ -1,17 +1,20 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+	<div class="container" style="width:50%">
+		<h3>Les derniers commentaires de nos clients</h3>
+					<table class="w3-table w3-bordered w3-border">
+						<tr class="w3-blue">
+							<td>Note</td>
+							<td>Commentaire</td>
+						</tr>
+							{% for comment in comments %}
+						<tr class="w3-hover-green">
+		    				<td>{{ comment.note }}</td>
+							<td>{{ comment.content }}</td>
+						</tr>
+							{% endfor %}
+					</table>
 
-	<table class="table-bordered">
-		<tr>
-			<td>Note</td>
-			<td>Commentaire</td>
-		</tr>
-	{% for comment in comments %}
-		<tr>
-		    <td>{{ comment.note }}</td>
-			<td>{{ comment.content }}</td>
-		</tr>
-	{% endfor %}
-	</table>
+	</div>
 {% endblock %}

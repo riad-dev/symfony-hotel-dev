@@ -8,16 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CommentsController extends Controller
 {
+
     /**
      * @Route("/comments")
      */
-    public function menu($comments)
+    public function menu()
     {
         $repository = $this->getDoctrine()->getRepository(Comments::class);
-        $comments = $repository->findLatest(3, $comments);
+        $comments = $repository->findAll();
 
         return $this->render(
-                'comments/menu.html.twig',
+                'comments/index.html.twig',
                 [
                     'comments' => $comments
                 ]

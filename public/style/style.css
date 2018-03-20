@@ -26,3 +26,6 @@ caption {
   caption-side: bottom;
   align: center;
 }
+a:hover{
+	color:pink;
+}

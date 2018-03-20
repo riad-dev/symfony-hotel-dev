@@ -6,42 +6,11 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        	<!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="item active">
-                    <div class="thumbnail">
-                        <img src="{# asset('img/chambre_4.jpg') #}">
-                      <div class="caption">
-
-                      </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="thumbnail">
-                      <img src="{# asset('img/chambre_3.jpg') #}" alt="">
-                      <div class="caption">
-
-                      </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="thumbnail">
-                      <img src="{# asset('img/chambre_6.jpg') #}" alt="Slide1">
-                      <div class="caption">
-
-                      </div>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-controls">
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-              </div>
-            </div>
-            <div class="container">
+        {% block body %}<div class="container">
             <div id="openweathermap-widget-19"></div>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 19,cityid: '2988507',appid: 'f15bb314f82439dffcdd9493695cbd50',units: 'metric',containerid: 'openweathermap-widget-19',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script></div>-->
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 19,cityid: '2988507',appid: 'f15bb314f82439dffcdd9493695cbd50',units: 'metric',containerid: 'openweathermap-widget-19',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script></div>  {% endblock %}
+
+
 
         {% block javascripts %}{% endblock %}
     </body>
