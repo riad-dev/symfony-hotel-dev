@@ -1,8 +1,14 @@
 body{
-	background: url("../img/back_image.jpg") center fixed no-repeat;
-	background-size: cover;
-
+    background: url("../img/back_image.jpg") center fixed no-repeat;
+    background-size: cover;
 }
+.logo {
+   max-height: 100%;
+   height: 100%;
+   width: 100%;
+   margin: 0 auto 
+}
+
 #openweathermap-widget-15 {
 	width: 15px;
 	height: 15px;
@@ -11,9 +17,12 @@ body{
 	margin-bottom: 0;
 	text-align: center;
 }
-#openweathermap-widget-15{
 
+.hotel>li{
+    margin-right: 20px;
+    marfin-left: 20px;
 }
+
 table{
 	border:2px;
 	border-color: black;
@@ -28,4 +37,63 @@ caption {
 }
 a:hover{
 	color:pink;
+}
+
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 20px 7px 20px;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
+}
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.no-padding {
+    padding: 0;
 }
