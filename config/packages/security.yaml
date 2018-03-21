@@ -1,14 +1,35 @@
 security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        db:
+            entity:
+                class: App\Entity\User
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
+            provider: db
+            #sur tout le site
+            pattern: ^/
 
+            form_login:
+                #route du formulaire d'authentification
+                login_path: app_user_login
+                #route du traitement du formulaire d'authentification
+                check_path: app_user_login
+                # vers quelle page on est redirigé après l'authentification
+                #default_target_path: app_index_index
+            logout:
+                #route de la page de déconnexion
+                path: app_user_logout
+                # vers quelle page on est redirigée après la déconnexion
+                target: app_index_index
             # activate different ways to authenticate
 
             # http_basic: true
@@ -21,4 +42,4 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
-         - { path: ^/profile, roles: ROLE_USER }
+         #- { path: ^/, roles: ROLE_USER }

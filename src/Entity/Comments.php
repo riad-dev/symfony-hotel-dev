@@ -9,9 +9,9 @@ use App\Repository\CommentsRepository;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Entity(repositoryClass="CommentsRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CommentsRepository")
  */
-class Comments 
+class Comments
 {
     /**
      * @ORM\Id
@@ -35,7 +35,7 @@ class Comments
         return $this->id_comm;
     }
 
-        
+
     function getContent() {
         return $this->content;
     }

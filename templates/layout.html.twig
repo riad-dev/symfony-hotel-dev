@@ -2,31 +2,49 @@
 {% block title %}WF3-HOTEL 2{% endblock %}
 {% block stylesheets %} 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="{{ asset('style/style.css') }}">
 {% endblock %}
 {% block javascripts %}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 {% endblock %}
+
 {% block body %}
-    
-	<nav class="navbar navbar-inverse">
-		<div class ="container-fluid">
-			<a href="" class="navbar-brand"><img src="{{ asset('img/logo.png') }}"></a>
+
+	<nav class="w3-bar w3-blue" style="background:lightblue">
+		<div class="container">
+
+			<a href="{{ path('app_user_index') }}" class="navbar-brand" style="font-family: 'Pacifico', cursive">WF3-HOTEL</a>
+      {% if app.user is null %}
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="">Inscription</a>
+					<a href="{{ path('app_user_register') }}">Inscription</a>
 				</li>
 				<li>
-					<a href="">Connexion</a>
+					<a href="{{ path('app_user_login') }}">Connexion</a>
 				</li>
+
+      {% endif %}
 				<li>
-					<a href="">Déconnexion</a>
+					<a href="{{ path('app_user_logout') }}">Déconnexion</a>
 				</li>
+        <li>
+          <a href="{#{ path('app_contact_index') }#}">Contact</a>
+        </li>
 			</ul>
                 </div>
 	</nav>
-        <div class="container">
-            <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '2988507',appid: 'f15bb314f82439dffcdd9493695cbd50',units: 'metric',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-        </div>
+  <nav class="navbar-default">
+    <ul>
+      <a href="{{ path('app_chambre_index') }}">Nos Chambres</a>
+      <a href="{{ path('app_activites_index') }}">Activités</a>
+      <a href="{{ path('app_comments_menu') }}">Derniers Avis</a>
+    </ul>
+
+  </nav>
+
+{% block content %}{% endblock %}
 {% endblock %}

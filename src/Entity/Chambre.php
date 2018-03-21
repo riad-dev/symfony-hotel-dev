@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\ChambreRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -26,8 +27,9 @@ class Chambre
     private $nom;
 
     /**
-     *
-     *
+     *@ORM\column()
+     *@Assert\NotBlank()
+     *@var string
      */
     private $image;
 
@@ -37,23 +39,20 @@ class Chambre
     *@var integer
      */
     private $nb_pers;
-    
+
     /**
-     *@ORM\Column()
-     * @Assert\NotBlank()
-     * @var integer 
+    *@ORM\Column()
+    *@Assert\NotBlank()
+    *@var integer
      */
     private $prix;
-    
+
     /**
-     *@ORM\Column(type="text")
-     * @Assert\NotBlank()
-     * @var string 
+    *@ORM\Column()
+    *@Assert\NotBlank()
+    *@var string
      */
     private $description;
-    
-    
-    
 
     function getId_chambre() {
         return $this->id_chambre;
@@ -79,11 +78,24 @@ class Chambre
         $this->image = $image;
     }
 
-    function setPlace($nb_pers) {
-        $this->nb_pers = $nb_pers;
+    function setNb_pers($nb_pers) {
+        $this->place = $nb_pers;
+    }
+    function getPrix() {
+        return $this->prix;
+    }
+
+    function getDescription() {
+        return $this->description;
+    }
+
+    function setPrix($prix) {
+        $this->prix = $prix;
+    }
+
+    function setDescription($description) {
+        $this->description = $description;
     }
 
 
-
 }
-

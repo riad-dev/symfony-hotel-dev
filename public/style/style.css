@@ -1,23 +1,31 @@
-body {
-        background-image: url{{asset('img/back_image.jpg')}};
-}
+body{
+	background: url("../img/back_image.jpg") center fixed no-repeat;
+	background-size: cover;
 
-/*#openweathermap-widget-15 {
-    width: 100px;
-    position: absolute;
-    z-index: 5;
-    left:0px;
-    bottom: 0px;
-    display : inline;
 }
-
-.thumbnail {
-    position: relative;
+#openweathermap-widget-15 {
+	width: 15px;
+	height: 15px;
 }
+.navbar-default, .navbar {
+	margin-bottom: 0;
+	text-align: center;
+}
+#openweathermap-widget-15{
 
-.caption {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-}*/
+}
+table{
+	border:2px;
+	border-color: black;
+}
+a>img {
+	height: 35px;
+	width: 100px;
+}
+caption {
+  caption-side: bottom;
+  align: center;
+}
+a:hover{
+	color:pink;
+}

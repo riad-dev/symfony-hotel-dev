@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+	<h2>Activités proches de l'hôtel</h2>
+	<div id="principal" class="ligne">
+                <main>
+                    <p>Visitez l'Observatoire de Paris, le plus ancien observatoire du monde toujours en fonctionnement !</p>
+                    <img src="{{ asset('img/eiffel.jpg') }}" alt="observatoire" title="observatoire">
+                    <br>
+                    <p>Visitez un des lieux les plus insolites de la capitale, les catacombes vous ouvrent leurs portes place denfert rochereau</p>
+                    <img src="{{ asset('img/catacombes.jpg') }}" alt="catacombes" title="catacombes">
+                    <br>
+                    <p>La tour montparnasse vous attend, surement le meilleur point de vue sur la Ville</p>
+                    <img src="{{ asset('img/montparnasse.jpg') }}" alt="tour montparnasse" title="tour montparnasse">
+                    <br>
+                    <p>Allez vous détendre au jardin du luxembourg, un des plus prisées des parisiens et des touristes</p>
+                    <img src="{{ asset('img/luxembourg.jpg') }}" alt="jardin du luxembourg" title="jardin du luxembourg">
+                </main>
+            </div>
+
+{% endblock %}

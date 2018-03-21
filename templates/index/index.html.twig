@@ -1,18 +1,8 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
-    <h1>{ Les Chambres } \\ WF3 Hotel <h1>
-            
-    {% for chambre in chambres %}
-        {% include 'chambre/preview.html.twig' with {"chambre": chambre only %}
-    {% endfor %}
-{% endblock %}
-   
 
-{% block javascripts %}
-    {# reprend le contenu du bloc javascript du layout #}
-    {{ parent() }}
-    <script> 
-        console.log('Mon js custom');
-    </script> 
+{% block content %}
+   <h1>Accueil</h1>
+    
+     
  {% endblock %}

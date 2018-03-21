@@ -1,22 +1,23 @@
 {% extends 'layout.html.twig' %}
 
-
-
 {% block content %}
-    <h1>{{ chambre.title }}</h1>
-    <div class="container">
-        <div class ="row">
-            <div class="thumbnail col-6-md col-12-xs">
-               <img src="{{ asset('upload/'~chambre.image}}">
+    <h2>Nos Chambres</h2>
+{% if chambres %}
+    <div class="row">
+
+        {% for chambre in chambres %}
+
+            <div class="col-md-3 pull-right thumbnail text-center">
+            	<figure>
+                <img src="{{ asset('img/' ~chambre.image) }}" alt="chambre bootstrap" class="img-responsive">
+
+                    <figcaption><a href="{{ path('app_chambre_preview', {id:chambre.id_chambre}) }}">{{ chambre.nom }}</a>
+                    </figcaption>
+
+            </figure>
             </div>
-            <div class=" row col-6-md col-12-xs"
-                 <h2>chambre.title</h2>
-            </div>
-            <div class=" row col-6-md col-12-xs"
-                 <h2>chambre.description</h2>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-                
- 
-{% endblock %}{# empty Twig template #}
+
+{% endif %}
+{% endblock %}

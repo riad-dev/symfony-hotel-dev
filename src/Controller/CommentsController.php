@@ -2,18 +2,31 @@
 
 namespace App\Controller;
 
+use App\Entity\Comments;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CommentsController extends Controller
 {
+
     /**
-     * @Route("/comments", name="comments")
+     * @Route("/comments")
      */
-    public function index()
+    public function menu()
     {
+        $repository = $this->getDoctrine()->getRepository(Comments::class);
+        $comments = $repository->findAll();
+
+        return $this->render(
+                'comments/index.html.twig',
+                [
+                    'comments' => $comments
+                ]
+        );
+    }
+    public function addComment(){
         return $this->render('comments/index.html.twig', [
-            'controller_name' => 'CommentsController',
-        ]);
+            'content' => $content,
+            'note' => $note]);
     }
 }

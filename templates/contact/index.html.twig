@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+	<div class="container">
+	<div class="row pull-left">
+		<h3 style="font-family: 'Pacifico', cursive">Voici où nous sommes situés :</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0720998020724!2d2.3316375513348975!3d48.83776341001101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c7785c4fd3%3A0xa335415b3909439d!2s82+Avenue+Denfert-Rochereau%2C+75014+Paris!5e0!3m2!1sfr!2sfr!4v1521550342129" width="250" height="250" frameborder="3" style="border: 3" allowfullscreen></iframe>
+	</div>
+
+	<div class="row pull-right">
+	<h3 style="font-family: 'Pacifico', cursive">Pour nous contacter :</h3>
+	{{ form_start(form) }}
+	{{ form_row(form.nom) }}
+	{{ form_row(form.email) }}
+	{{ form_row(form.telephone) }}
+    {{ form_row(form.message) }}
+	<div class="form-btn-group">
+		<button type="submit" class="btn btn-primary">Envoyer</button>
+	</div>
+	{{ form_end(form) }}
+	</div></div>
+{% endblock %}

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -23,9 +24,8 @@ class User implements UserInterface
     *@Assert\NotBlank()
     *@var string
     */
-    
     private $nom;
-    
+
     /**
     *@ORM\Column(unique=true)
     *@Assert\NotBlank()
@@ -39,51 +39,67 @@ class User implements UserInterface
     *@var string
     */
     private $password;
+
     /**
     *@ORM\Column(length=20)
     *@var string
     */
     private $role = 'ROLE_USER';
-    function getNom() {
+
+    public function getNom() {
         return $this->nom;
     }
 
-    function getEmail() {
+    public function getEmail() {
         return $this->email;
     }
 
-    function getPassword() {
+    public function getPassword() {
         return $this->password;
     }
 
-    function setNom($nom) {
+    public function setNom($nom) {
         $this->nom = $nom;
+		return $this;
     }
 
-    function setEmail($email) {
+    public function setEmail($email) {
         $this->email = $email;
+		return $this;
     }
 
-    function setPassword($password) {
+    public function setPassword($password) {
         $this->password = $password;
+		return $this;
     }
 
-    function getId() {
+    public function getId() {
         return $this->id;
     }
 
 	public function eraseCredentials() {
 	       //sin on veut effacer les droits d'un utilisateur
 	   }
-	public function getRoles() {
-       return [$this->role];
+
+	public function getRole() {
+       return $this->role;
    }
+
+	public function getRoles()
+    {
+       return [$this->role];
+    }
+
+	public function setRole($role){
+		$this->role = $role;
+		return $this;
+    }
 
    	public function getSalt() {
      //sécurité supplémentaire, on utilise un algocryptage ne nécessitant pas cette fonction
    	}
 
    	public function getUsername(): string{
-       return $this->nom;
+       return $this->email;
    }
 }
